@@ -1,0 +1,103 @@
+#projects {
+	background: $col2;
+	background-image: linear-gradient(90deg, $col3 0%, $col2 100%);
+	padding: 60px 0 40px;
+	
+	@include clearfix();
+	
+	.project {
+		width: percentage(1/3);
+		margin: 40px auto 30px;
+		
+		@include md() {
+			width: percentage(1/2);
+		}
+		
+		@include xs() {
+			width: percentage(1/1);
+			float: none;
+			max-width: 420px;
+			margin-bottom: 70px;
+		}
+		
+		.inner {
+			background: #fff;
+			padding: 20px 20px 80px;
+			text-align: center;
+			box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);
+			border-radius: 6px;
+			transition: box-shadow .15s ease-in-out;
+			position: relative;
+			
+			&:hover {
+				box-shadow: 0 0 0 7px rgba(255,255,255,.25), 0 0 0 15px rgba(255,255,255,.25);
+			}
+			
+			figure {
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				overflow: hidden;
+				margin: -60px auto 25px;
+				background-image: linear-gradient(0deg, #6D80B8 0%, #3E3E58 100%);
+				border: 5px solid #CED1E2;
+				box-shadow: inset 0 0 5px rgba(0,0,0,.25), 0 0 0 7px rgba(255,255,255,.25);
+				transition: box-shadow .15s ease-in-out;
+				position: relative;
+				
+				img {
+					@include center(50%,50%);
+					opacity: .75;
+					transition: opacity .15s ease-in-out;
+				}
+			}
+			
+			h2 {
+				font-size: 24px;
+				margin-bottom: 30px;
+				font-weight: 600;
+			}
+			
+			p {
+				font-size: 16px;
+				line-height: 24px;
+				margin-bottom: 30px;
+			}
+			
+			a {
+				display: inline-block;
+				color: #fff;
+				text-transform: uppercase;
+				white-space: nowrap;
+				font-weight: 600;
+				letter-spacing: 2px;
+				background: $col3;
+				padding: 6px 30px;
+				border-radius: 6px;
+				box-shadow: 0 0 0 0 darken($col3, 10%);
+				transition: all .15s ease-in-out;
+				position: absolute;
+				bottom: 30px;
+				transform: translateX(-50%);
+				
+				&:hover {
+					border-radius: 3px;
+					box-shadow: 0 0 0 3px darken($col3, 10%);
+					background: darken($col3, 10%);
+				}
+			}
+		}
+		
+		.inner:hover {
+			
+			figure {
+				
+				box-shadow: inset 0 0 5px rgba(0,0,0,.25), 0 0 0 7px rgba(255,255,255,.25), 0 0 0 15px rgba(255,255,255,.25);
+				
+				img {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

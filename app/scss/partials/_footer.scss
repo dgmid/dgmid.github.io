@@ -1,0 +1,72 @@
+footer {
+	background-color: $col1;
+	padding: 70px 0;
+	
+	@include xs() {
+		padding: 40px 0;
+	}
+	
+	@include xx() {
+		padding: 30px 0;
+	}
+	
+	@include clearfix();
+	
+	.info {
+		text-align: right;
+		width: percentage(4/5);
+		
+		@include xs() {
+			width: percentage(1);
+			text-align: center;
+			padding-bottom: 20px;
+		}
+		
+		p {
+			font-size: 14px;
+			line-height: 18px;
+			color: $col4;
+			font-weight: 300;
+			
+			a {
+				color: $col4;
+				
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+	}
+	
+	.social {
+		width: percentage(1/5);
+		
+		@include xs() {
+			width: percentage(1);
+			text-align: center;
+		}
+		
+		ul {
+			list-style-type: none;
+			margin-top: 3px;
+			
+			li {
+				display: inline-block;
+				margin-right: 5px;
+				
+				&:last-of-type {
+					margin-right: 0;
+				}
+				
+				a svg:hover .social-icon {
+					fill: #fff;
+				}
+				
+				a svg .social-icon {
+					transition: fill .3s ease-in-out;
+					fill: $col4;
+				}
+			}
+		}
+	}
+}

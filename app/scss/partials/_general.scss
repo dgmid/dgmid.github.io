@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: $fontface;
+}
+
+body {
+	font-size: $fontsize;
+	line-height: $lineheight;
+}
+
+a {
+	text-decoration: none;
+	transition: all	.15s ease-in-out;
+}

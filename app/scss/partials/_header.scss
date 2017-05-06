@@ -1,0 +1,165 @@
+#site-header {
+	height: 100%;
+	text-align: center;
+	background: $col1 url('../img/bg/header.jpg') no-repeat center bottom;
+	background-size: cover;
+	overflow: hidden;
+	
+	#site-nav {
+		position: fixed;
+		width: 100%;
+		z-index: 1;
+		height: 45px;
+		padding: 5px 15px;
+		background-color: rgba(62,62,88,.7);
+		border-bottom: 1px solid rgba(206,209,226,.3);
+		text-align: left;
+		font-size: 12px;
+		line-height: 35px;
+		font-weight: 600;
+		transition: opacity .75s ease;
+		
+		&.hidden {
+			opacity: 0;
+			pointer-events: none;
+		}
+		
+		a {
+			line-height: 35px;
+			display: inline-block;
+			color: $headertext;
+			
+			&:hover {
+				color: $col4;
+			}
+		}
+		
+		& > a {
+			color: $headertext;
+			background: url('../img/icon-mdg.png') no-repeat left center;
+			background-size: 24px;			
+			padding-left: 30px;
+		}
+		
+		ul {
+			float: right;
+			
+			li {
+				display: inline-block;
+				
+				&::after {
+					content: ' | ';
+					color: $headertext;
+				}
+				
+				&:last-of-type::after {
+					content: '';
+				}
+			}
+		}
+		
+		@include xx() {
+			
+			ul li a {
+				font-size: 18px;
+				font-weight: 700;
+				text-transform: uppercase;
+				padding: 0 10px;
+			}
+			
+			ul li a span {
+				display: none;
+			}
+		}
+	}
+	
+	.header-content {
+	
+		@include center(50%,50%);
+		
+		figure {
+			width: 120px;
+			height: 120px;
+			margin: 0 auto 20px;
+			overflow: hidden;
+			border-radius: 50%;
+			border: 5px solid $col3;
+			box-shadow: 0 3px 6px rgba(0,0,0,.5);
+			
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+		
+		span,
+		h1 {
+			color: $headertext;
+			padding-bottom: 20px;
+		}
+		
+		span {
+			font-size: 20px;
+			padding-bottom: 15px;
+			display: block;
+			
+			@include xx() {
+				font-size: 13px;
+				padding-bottom: 5px;	
+			}
+		}
+		
+		h1 {
+			font-size: 55px;
+			margin-top: 10px;
+			margin-bottom: 30px;
+			font-weight: 700;
+			
+			@include xx() {
+				font-size: 30px;
+				margin-bottom: 15px;	
+			}
+		}
+		
+		a {
+			display: inline-block;
+			color: $headertext;
+			text-transform: uppercase;
+			font-weight: 600;
+			letter-spacing: 2px;
+			background: $col2;
+			padding: 15px 30px;
+			border-radius: 6px;
+			
+			&:hover {
+				background: darken($col2, 10%);
+			}
+		}
+	}
+	
+	&::before,
+	&::after {
+		background-color: #fff;
+		content: '';
+		display: block;
+		width: calc(50% - 50px);
+		height: 40px;
+		position: absolute;
+		bottom: 0;
+	}
+	
+	&::before { right: calc(50% + 50px); }
+	&::after { left: calc(50% + 50px); }
+	
+	@include xx() {
+		
+		&::before,
+		&::after {
+			width: calc(50% - 25px);
+			height: 20px;
+		}
+		
+		&::before { right: calc(50% + 25px); }
+		&::after { left: calc(50% + 25px); }
+	}
+}

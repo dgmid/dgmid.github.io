@@ -1,0 +1,33 @@
+.extras {
+	padding: 40px 30px;
+	
+	p {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	
+	ul {
+		
+		column-count: 2;
+		column-gap: 30px;
+		max-width: 450px;
+		margin: 0 auto;
+		
+		@include xs {
+			column-count: 1;
+			text-align: center;
+		}
+		
+		li {
+			font-size: 14px;
+			
+			a {
+				color: $col2;
+				
+				&:hover {
+					color: $col3;
+				}
+			}
+		}
+	}
+}
