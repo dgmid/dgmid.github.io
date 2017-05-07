@@ -78,27 +78,30 @@
 		@include center(50%,50%);
 		
 		figure {
-			width: 120px;
-			height: 120px;
-			margin: 0 auto 20px;
-			overflow: hidden;
-			border-radius: 50%;
-			border: 5px solid $col3;
-			box-shadow: 0 3px 6px rgba(0,0,0,.5);
 			
-			img {
-				display: block;
-				width: 100%;
+			div {
+				width: 120px;
+				height: 120px;
+				margin: 0 auto 15px;
+				overflow: hidden;
+				border-radius: 50%;
+				border: 5px solid $col3;
+				box-shadow: 0 3px 6px rgba(0,0,0,.5);
+				
+				img {
+					display: block;
+					width: 100%;
+				}
 			}
 		}
 		
-		span,
+		figcaption,
 		h1 {
 			color: $headertext;
 			padding-bottom: 20px;
 		}
 		
-		span {
+		figcaption {
 			font-size: 20px;
 			padding-bottom: 15px;
 			display: block;
