@@ -15,7 +15,7 @@ $small: 480px;
 $phone: 768px;
 $tablet: 992px;
 $laptop: 1024px;
-$desktop: 1440px;
+$desktop: 1280px;
 
 /* @end */
 
@@ -49,7 +49,7 @@ $desktop: 1440px;
 	@mixin sm { @media (max-width: #{$tablet 	- 1px}) { @content; } }
 	@mixin md { @media (max-width: #{$laptop 	- 1px}) { @content; } }
 	@mixin lg { @media (max-width: #{$desktop 	- 1px}) { @content; } }
-	@mixin xl { @media (min-width: #{$desktop }) { @content; } }
+	@mixin xl { @media (max-width: #{$desktop }) { @content; } }
 	
 	/* @end */
 

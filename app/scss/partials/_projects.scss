@@ -6,8 +6,12 @@
 	@include clearfix();
 	
 	.project {
-		width: percentage(1/3);
+		width: percentage(1/4);
 		margin: 40px auto 30px;
+		
+		@include xl() {
+			width: percentage(1/3);
+		}
 		
 		@include md() {
 			width: percentage(1/2);
