@@ -2,8 +2,13 @@
 	height: 100%;
 	text-align: center;
 	background: $col1 url('../img/bg/header.jpg') no-repeat center bottom;
+	background-attachment: fixed;
 	background-size: cover;
 	overflow: hidden;
+	
+	@include md() {
+		background-attachment: scroll;
+	}
 	
 	#site-nav {
 		position: fixed;
